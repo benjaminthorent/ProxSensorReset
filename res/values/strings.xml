@@ -2,7 +2,20 @@
 <resources>
 
     <string name="app_name">ProxSensorReset</string>
-    <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
-
+    <string name="action_settings">Settings</string>
+    <string name="more_info">More Info</string>
+    <string name="give_me_a_beer">Give me a beer</string>
+    <string name="settings_activity">Settings</string>
+    <string name="validate">Validate</string>
+    <string name="calibration_process">Calibration Process</string>
+    <string name="calibration_history">Calibrations History</string>
+    <string name="phase_one_title">Calibration Step 1/3</string>
+    <string name="phase_one_content">First, hide the proximity sensor of your phone then click on the validation button below.</string>
+    <string name="phase_two_title">Calibration Step 2/3</string>
+    <string name="phase_two_content">Then, remove your finger from the proximity sensor of your phone and click again on the validation button below.</string>
+    <string name="phase_three_title">Calibration Step 3/3</string>
+    <string name="phase_three_content">Here are the results of your calibration process. If unsure of any of those figures, please go back in the process to perform again calibration. If measurement are OK to you, please click on Calibrate to calibrate you sensor.</string>
+    <string name="history">History</string>
+    
 </resources>

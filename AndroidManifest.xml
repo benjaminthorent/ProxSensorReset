@@ -5,23 +5,64 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="8"
+        android:minSdkVersion="11"
         android:targetSdkVersion="17" />
 
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@android:style/Theme.Holo.Light" >
         <activity
             android:name="com.abfactory.proxsensorreset.ProxSensorReset"
+            android:screenOrientation="portrait" 
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        
+        <activity android:name=".SettingsActivity" 
+            android:label="@string/settings_activity"
+            android:parentActivityName="com.abfactory.proxsensorreset.ProxSensorReset"
+            android:screenOrientation="portrait" 
+            android:configChanges="orientation|keyboardHidden"
+            android:windowSoftInputMode="stateHidden">            
+        </activity>
+        
+        <activity android:name=".ResetFlowPhaseOneActivity" 
+            android:label="@string/calibration_process"
+            android:parentActivityName="com.abfactory.proxsensorreset.ProxSensorReset"
+            android:screenOrientation="portrait" 
+            android:configChanges="orientation|keyboardHidden"
+            android:windowSoftInputMode="stateHidden">            
+        </activity>
+        
+        <activity android:name=".ResetFlowPhaseTwoActivity" 
+            android:label="@string/calibration_process"
+            android:parentActivityName="com.abfactory.proxsensorreset.ResetFlowPhaseOneActivity"
+            android:screenOrientation="portrait" 
+            android:configChanges="orientation|keyboardHidden"
+            android:windowSoftInputMode="stateHidden">            
+        </activity>
+        
+        <activity android:name=".ResetFlowPhaseThreeActivity" 
+            android:label="@string/calibration_process"
+            android:parentActivityName="com.abfactory.proxsensorreset.ResetFlowPhaseTwoActivity"
+            android:screenOrientation="portrait" 
+            android:configChanges="orientation|keyboardHidden"
+            android:windowSoftInputMode="stateHidden">            
+        </activity>
+        
+        <activity android:name=".CalibrationsHistoryActivity" 
+            android:label="@string/calibration_history"
+            android:parentActivityName="com.abfactory.proxsensorreset.SettingsActivity"
+            android:screenOrientation="portrait" 
+            android:configChanges="orientation|keyboardHidden"
+            android:windowSoftInputMode="stateHidden">    
+        </activity>
+        
     </application>
 
 </manifest>
