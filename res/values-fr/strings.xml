@@ -9,7 +9,7 @@
     <string name="settings_activity">Réglages</string>
     <string name="validate">Valider</string>
     <string name="calibrate">Calibrer</string>
-    <string name="calibration_process">Process de calibration</string>
+    <string name="calibration_process">Procédure de calibration</string>
     <string name="calibration_history">Historique des calibrations</string>
     <string name="phase_one_title">Calibration Étape 1/3</string>
     <string name="phase_one_content">First, hide the proximity sensor of your phone then click on the validation button below.</string>
@@ -36,5 +36,6 @@
 	<string name="restore_conf_dialog_title">Are you sure you want to proceed ?</string>
     <string name="restore_conf_dialog_content">You are about to update your proximity sensor configuration. Please confirm you want to proceed with this change. Your phone will then automatically reboot to take those changes into consideration.</string>
     <string name="value_to_be_set">Calibration value to be set :</string>
+    <string name="use_previous">Use previous</string>
     
 </resources>

@@ -44,7 +44,7 @@
         android:id="@+id/validate"
         android:layout_width="150dip"
         android:layout_height="35dip"
-        android:background="@drawable/yellow_btn"
+        android:background="@drawable/green_btn"
         android:gravity="center"
         android:paddingBottom="0dip"
         android:paddingLeft="10dip"
@@ -52,7 +52,23 @@
         android:paddingTop="0dip"
         android:text="@string/validate"
         android:textColor="#FFFFFF"
-        android:textSize="15sp"
+        android:textSize="13sp"
         android:textStyle="bold" />
+    
+    <Button
+        android:id="@+id/use_previous"
+        android:layout_width="150dip"
+        android:layout_height="35dip"
+        android:background="@drawable/blue_btn"
+        android:gravity="center"
+        android:paddingBottom="0dip"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip"
+        android:paddingTop="0dip"
+        android:text="@null"
+        android:textColor="#FFFFFF"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:layout_marginTop="5dip" />
 
 </LinearLayout>

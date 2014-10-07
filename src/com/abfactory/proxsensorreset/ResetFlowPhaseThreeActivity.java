@@ -1,5 +1,7 @@
 package com.abfactory.proxsensorreset;
 
+import com.abfactory.proxsensorreset.datamodel.CalibrationProcedureData;
+
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -9,14 +11,20 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class ResetFlowPhaseThreeActivity extends Activity {
 
+	// Calibration data track throughout the procedure
+	private CalibrationProcedureData calibrationData = new CalibrationProcedureData();
+		
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_reset_phase_three);
 
+		calibrationData = getIntent().getParcelableExtra(CalibrationProcedureData.CALIBRATION_PROCEDURE_DATA);
+		
 		// Display value to be set
 		TextView defaultValue = (TextView) findViewById(R.id.value_to_be_set);
 		defaultValue.setText(getString(R.string.value_to_be_set) + " " + getValueToBeSet());

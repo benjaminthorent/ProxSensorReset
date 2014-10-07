@@ -56,9 +56,7 @@ public class SettingsActivity extends Activity {
 					ph.saveSettings(Language.getLocaleStringFromIndex(((Spinner)findViewById(R.id.language_spinner)).getSelectedItemPosition()));
 					// Update language display
 					setAppLanguage();
-					Intent settingsIntent = new Intent(SettingsActivity.this, SettingsActivity.class);
-					startActivity(settingsIntent);
-					finish();
+					restartActivity();
 				}
 				
 			}
@@ -111,6 +109,11 @@ public class SettingsActivity extends Activity {
 			}
 		});
 	}
+	
+	@Override
+	protected void onResume() {
+		super.onResume();
+	}
 
 	private String getDefaultValue() {
 		return "3.9";
@@ -130,6 +133,12 @@ public class SettingsActivity extends Activity {
 		Configuration config = new Configuration();
 		config.locale = locale;
 		getBaseContext().getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
+	}
+	
+	private void restartActivity() {
+	    Intent intent = getIntent();
+	    finish();
+	    startActivity(intent);
 	}
 
 }

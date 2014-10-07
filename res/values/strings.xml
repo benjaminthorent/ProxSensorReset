@@ -36,5 +36,6 @@
 	<string name="restore_conf_dialog_title">Are you sure you want to proceed ?</string>
     <string name="restore_conf_dialog_content">You are about to update your proximity sensor configuration. Please confirm you want to proceed with this change. Your phone will then automatically reboot to take those changes into consideration.</string>
     <string name="value_to_be_set">Calibration value to be set :</string>
+    <string name="use_previous">Use previous</string>
 	
 </resources>
