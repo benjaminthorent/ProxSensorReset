@@ -37,7 +37,7 @@
         android:id="@+id/icon"
         android:layout_width="200dip"
         android:layout_height="200dip"
-        android:background="@drawable/howto"
+        android:background="@drawable/howto_hide"
         android:contentDescription="@null" />
 
     <Button

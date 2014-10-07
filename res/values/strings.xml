@@ -8,6 +8,7 @@
     <string name="give_me_a_beer">Give me a beer</string>
     <string name="settings_activity">Settings</string>
     <string name="validate">Validate</string>
+    <string name="calibrate">Calibrate</string>
     <string name="calibration_process">Calibration Process</string>
     <string name="calibration_history">Calibrations History</string>
     <string name="phase_one_title">Calibration Step 1/3</string>
@@ -17,5 +18,23 @@
     <string name="phase_three_title">Calibration Step 3/3</string>
     <string name="phase_three_content">Here are the results of your calibration process. If unsure of any of those figures, please go back in the process to perform again calibration. If measurement are OK to you, please click on Calibrate to calibrate you sensor.</string>
     <string name="history">History</string>
-    
+    <string name="calibration_conf_dialog_title">Are you sure you want to proceed ?</string>
+    <string name="calibration_conf_dialog_content">You are about to update your proximity sensor configuration. Please confirm you want to proceed with this change. Your phone will then automatically reboot to take those changes into consideration.</string>
+    <string name="dialog_cancel">Cancel</string>
+    <string name="dialog_confirm">Confirm</string>
+    <string name="current_setting">Current setting :</string>
+    <string name="languageSelectionDescription">Language</string>
+    <string name="languageEnglish">English</string>
+    <string name="languageFrench">Français</string>
+    <string name="more_info_content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+    <string name="support_us_content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+	<string name="calibrations_history">Calibrations history</string>
+	<string name="default_value">Default value :</string>
+	<string name="restore">Restore</string>
+	<string name="calibrations_performed">Calibrations performed :</string>
+	<string name="languageUpdateOK">Language successfully updated !</string>
+	<string name="restore_conf_dialog_title">Are you sure you want to proceed ?</string>
+    <string name="restore_conf_dialog_content">You are about to update your proximity sensor configuration. Please confirm you want to proceed with this change. Your phone will then automatically reboot to take those changes into consideration.</string>
+    <string name="value_to_be_set">Calibration value to be set :</string>
+	
 </resources>

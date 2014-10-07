@@ -1,9 +1,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/settings_full_content"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="#ffffff"
-    android:gravity="center_horizontal"
     android:orientation="vertical"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
@@ -11,19 +10,110 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".ProxSensorReset" >
 
-    <Button
-        android:id="@+id/history"
-        android:layout_width="150dip"
-        android:layout_height="35dip"
-        android:background="@drawable/yellow_btn"
-        android:gravity="center"
-        android:paddingBottom="0dip"
-        android:paddingLeft="10dip"
-        android:paddingRight="10dip"
-        android:paddingTop="0dip"
-        android:text="@string/history"
-        android:textColor="#FFFFFF"
-        android:textSize="15sp"
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="50dip"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/language_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="@string/languageSelectionDescription"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/language_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp" />
+    </RelativeLayout>
+
+    <View
+	android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:layout_marginTop="60dip"
+        android:layout_marginBottom="60dip"
+        android:layout_marginLeft="40dip"
+        android:layout_marginRight="40dip"
+        android:background="#FF909090" />
+    
+    <TextView
+        android:id="@+id/calibrations_history"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/calibrations_history"
+        android:textSize="20sp"
         android:textStyle="bold" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="35dip"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="15dip"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/default_value"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="5dp"
+            android:gravity="center_vertical"
+            android:text="@null"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/restore"
+            android:layout_width="80dip"
+            android:layout_height="35dip"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dip"
+            android:background="@drawable/android_like_btn"
+            android:contentDescription="@null"
+            android:scaleType="fitCenter"
+            android:text="@string/restore"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="35dip"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="5dip"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/calibrations_performed"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="5dp"
+            android:gravity="center_vertical"
+            android:text="@null"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/history"
+            android:layout_width="80dip"
+            android:layout_height="35dip"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dip"
+            android:background="@drawable/android_like_btn"
+            android:contentDescription="@null"
+            android:scaleType="fitCenter"
+            android:text="@string/history"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
 
 </LinearLayout>
