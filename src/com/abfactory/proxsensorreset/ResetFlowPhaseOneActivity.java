@@ -5,12 +5,15 @@ import com.abfactory.proxsensorreset.datamodel.CalibrationProcedureData;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.Toast;
 
 public class ResetFlowPhaseOneActivity extends Activity {
+	
+	private static final int MY_REQUEST_CODE = 123;
 
 	// Calibration data track throughout the procedure
 	private CalibrationProcedureData calibrationData = new CalibrationProcedureData();
@@ -30,7 +33,7 @@ public class ResetFlowPhaseOneActivity extends Activity {
 				// Convey it via the intent
 				intent.putExtra(CalibrationProcedureData.CALIBRATION_PROCEDURE_DATA, calibrationData);
 				// Start new activity
-				startActivity(intent);
+				startActivityForResult(intent, MY_REQUEST_CODE);
 			}
 		});
 
@@ -63,6 +66,16 @@ public class ResetFlowPhaseOneActivity extends Activity {
 		} else {
 			usePrevious.setVisibility(View.GONE);
 		}
+	}
+	
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent backIntent) {
+	    super.onActivityResult(requestCode, resultCode, backIntent);
+	    if(resultCode == RESULT_OK && requestCode == MY_REQUEST_CODE && backIntent != null){
+	    	if (resultCode == RESULT_OK) {
+	        	calibrationData =backIntent.getParcelableExtra(CalibrationProcedureData.CALIBRATION_PROCEDURE_DATA);
+	        }
+        }
 	}
 
 	private double getCalibrationData() {

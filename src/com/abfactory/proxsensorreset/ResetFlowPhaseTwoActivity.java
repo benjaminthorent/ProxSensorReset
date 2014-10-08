@@ -5,6 +5,7 @@ import com.abfactory.proxsensorreset.datamodel.CalibrationProcedureData;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -64,6 +65,30 @@ public class ResetFlowPhaseTwoActivity extends Activity {
 			usePrevious.setVisibility(View.GONE);
 		}
 	}
+	
+	@Override
+    public void onBackPressed()
+    {
+        Intent backIntent = new Intent();
+        backIntent.putExtra(CalibrationProcedureData.CALIBRATION_PROCEDURE_DATA, calibrationData);
+        setResult(RESULT_OK, backIntent);
+        super.onBackPressed();
+    }
+	
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()) {
+		case android.R.id.home:
+			Intent backIntent = new Intent();
+	        backIntent.putExtra(CalibrationProcedureData.CALIBRATION_PROCEDURE_DATA, calibrationData);
+	        setResult(RESULT_OK, backIntent);
+	        finish();
+			return true;
+		default:
+			return super.onOptionsItemSelected(item);
+		}
+	}
+	
 
 	private double getCalibrationData() {
 		return 10;
