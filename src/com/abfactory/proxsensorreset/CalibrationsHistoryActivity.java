@@ -28,6 +28,6 @@ public class CalibrationsHistoryActivity extends Activity {
                 android.R.layout.simple_list_item_1,
                 history );
 
-        listviewHistory.setAdapter(arrayAdapter); 		
+        listviewHistory.setAdapter(arrayAdapter);	
 	}
 }
